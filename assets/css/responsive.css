@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+                        responsive layout
+--------------------------------------------------------------*/
+
+/*page-header*/
+#page-header .featured-header-area-card {
+    height: auto;
+    padding: 70px 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .featured-header-area-card {
+        height: 430px !important;
+    }
+
+
+}
+/*if screen max width greater than 1674,hidden catalogue*/
+@media screen and (max-width: 1674px){
+    .single-area-post-catalogue-container{
+        visibility: hidden;
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+    .featured-header-area-card {
+        height: 350px !important;
+    }
+    .logo-img {
+        max-width: 400px !important;
+    }
+}
+@media screen and (max-width: 880px) {
+    .featured-header-area-card {
+        height: 290px !important;
+    }
+    .logo-img {
+        max-width: 300px !important;
+    }
+}
+@media screen and (max-width: 750px) {
+    .featured-header-area-card {
+        height: 250px !important;
+    }
+    .logo-img {
+        max-width: 250px !important;
+    }
+}
+@media screen and (max-width: 690px) {
+    .featured-header-area-card {
+        height: 210px !important;
+    }
+    .logo-img {
+        max-width: 200px !important;
+    }
+}
+@media screen and (max-width: 550px) {
+    .featured-header-area-card {
+        height: auto !important;
+        padding: 50px 0 !important;
+    }
+}

@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------
+HTML
+--------------------------------------------------------------*/
+html {
+    margin-top: 0;
+}
+
+
+/*--------------------------------------------------------------
+Page Header
+--------------------------------------------------------------*/
+.featured-header-area-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.blog {
+    margin: 0;
+}
+
+/*--------------------------------------------------------------
+slider area
+--------------------------------------------------------------*/
+.featured-slider-area-card {
+    width: 100%;
+    max-width: 1120px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+
+
+.featured-slider-area-card-swiper-wrapper {
+    display: flex;
+    list-style: none;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.featured-slider-area-card-swiper-wrapper-item {
+    width: 264px;
+    height: 144px;
+    margin-right: 20px;
+}
+
+.featured-slider-area-card-swiper-wrapper-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------------------------------------------------
+main container area
+--------------------------------------------------------------*/
+.featured-posts-area {
+    width: 100%;
+}
+
+.featured-posts-area-content {
+    max-width: 1120px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.featured-posts-area-article {
+    margin-top: 20px;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.featured-posts-area-post-thumbnail {
+    width: 50%;
+    margin: 0;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.featured-posts-area-post-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.featured-posts-area-post-content {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.featured-posts-area-post-content-title {
+    text-align: center;
+}
+
+.featured-posts-area-post-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-navigation-area {
+    max-width: 1120px;
+    position: relative;
+    margin: 30px auto;
+    display: flex;
+    color: #9b9595;
+    /*background: white;*/
+    /*box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);*/
+    /*height: 60px;*/
+    /*align-items: center;*/
+    /*border-radius: 8px;*/
+
+}
+
+.featured-navigation-area-item {
+    margin-left: 10px;
+    width: auto;
+}
+
+.featured-navigation-area-item a {
+    color: black;
+}
+
+/*--------------------------------------------------------------
+content single area
+--------------------------------------------------------------*/
+.single-area-post {
+    display: flex;
+    max-width: 1120px;
+    position: relative;
+    margin: 30px auto;
+}
+
+.single-area-post-content {
+    background: white;
+    height: auto;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-area-post-content-header {
+    text-align: center;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+}
+
+.single-area-post-content-content {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.single-area-post-content-content figure {
+    border-radius: 8px;
+}
+
+.single-area-post-content-content img {
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    height: auto;
+    border: none;
+}
+
+/*catalogue*/
+
+.single-area-post-catalogue-container{
+    float: right;
+}
+
+.single-area-post-catalogue {
+    width: fit-content;
+    height: fit-content;
+    background: white;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-left: 10px;
+    position: fixed;
+}
+
+
+.single-area-post-catalogue-ul {
+    white-space: nowrap;
+    list-style: decimal;
+}
+
+.single-area-post-catalogue-ul ol {
+    list-style: decimal;
+}
