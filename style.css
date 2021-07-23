@@ -171,7 +171,7 @@ content single area
 
 /*catalogue*/
 
-.single-area-post-catalogue-container{
+.single-area-post-catalogue-container {
     float: right;
 }
 
@@ -193,4 +193,12 @@ content single area
 
 .single-area-post-catalogue-ul ol {
     list-style: decimal;
+}
+
+/*footer*/
+.footer-area {
+    width: 100%;
+    background: #33363b;
+    height: 150px;
+    margin-top: 50px;
 }

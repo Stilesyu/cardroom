@@ -1,4 +1,6 @@
+<div class="featured-header-area-card">
 
-    <div class="featured-header-area-card">
-    </div>
+
+</div>
+
 
