@@ -74,4 +74,9 @@ function article_index($content)
     }
 }
 
+function hidden_if_catalogue_not_exist()
+{
+
+}
+
 

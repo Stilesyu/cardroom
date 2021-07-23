@@ -28,14 +28,8 @@ $classes = array(
         </div>
         <div class="single-area-post-catalogue-container">
             <div class="single-area-post-catalogue">
-                <?php
-                $article = get_the_content();
-                echo article_index($article);
-                ?>
+                <?php get_sidebar() ?>
             </div>
         </div>
     </div>
-    <script>
-        console.log(window.innerWidth);
-    </script>
 </article>
