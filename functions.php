@@ -10,12 +10,12 @@ $header_info = array(
 );
 add_theme_support('custom-header', $header_info);
 //删除header-image边上留边
-function remove_admin_login_header()
-{
-    remove_action('wp_head', '_admin_bar_bump_cb');
-}
-
-add_action('get_header', 'remove_admin_login_header');
+//function remove_admin_login_header()
+//{
+//    remove_action('wp_head', '_admin_bar_bump_cb');
+//}
+//
+//add_action('get_header', 'remove_admin_login_header');
 
 //import style.css
 function enqueue_styles()
@@ -45,19 +45,22 @@ function article_index($content)
 {
     $matches = array();
     $ul_li = '';
+    //regex:extract heading content
     $rh = "|<h[^>]+>(.*)</h[^>]+>|iU";
     $h2_num = 0;
     $h3_num = 0;
     if (is_single()) {
         if (preg_match_all($rh, $content, $matches)) {
             foreach ($matches[1] as $num => $title) {
+                //matches[0] <h2 id=xx>yyy</h2>
+                //matches[1] yyy
+                //extract header type
                 $hx = substr($matches[0][$num], 0, 3);
                 $start = stripos($content, $matches[0][$num]);
                 $end = strlen($matches[0][$num]);
                 if ($hx == "<h2") {
                     $h2_num += 1;
                     $h3_num = 0;
-                    // 文章标题添加id，便于目录导航的点击定位
                     $content = substr_replace($content, '<h2 id="h2-' . $num . '">' . $title . '</h2>', $start, $end);
                     $title = preg_replace('/<.+?>/', "", $title); //将h2里面的a链接或者其他标签去除，留下文字
                     $ul_li .= '<li class="single-area-post-catalogue-h2"><a href="#h2-' . $num . '" class="tooltip" title="' . $title . '">' . $title . "</a><i class=\"post_nav_dot\"></i></li>\n";

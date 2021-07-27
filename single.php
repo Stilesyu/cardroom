@@ -6,11 +6,12 @@
  */
 
 ?>
+<?php get_header();
 
-<?php get_header() ?>
+?>
 
-<section class="featured-single-area">
-    <section class="featured-single-area-contain">
+<section class="single-area">
+    <section class="single-area-contain">
         <?php
         while (have_posts()):
             the_post();
@@ -21,3 +22,6 @@
 
 
 </section>
+<?php
+get_footer()
+?>
