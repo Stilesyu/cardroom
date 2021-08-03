@@ -12,7 +12,8 @@
 function cardroom_options($control){
     $ashe_defaults = array(
         'general_sidebar_width' => '270',
-        'general_show_up_in_the_post'=>true
+        'general_show_up_in_the_post'=>true,
+        'general_slider_url'=>''
     );
 
     // merge defaults and options

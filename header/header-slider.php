@@ -12,7 +12,7 @@
             <!--slider card one-->
             <li class="slider-area-card-swiper-wrapper-item">
                <a>
-                   <img src="https://cdn.sspai.com/article/5a28f458-3c74-a518-af63-a867eb9a451e.jpg?imageMogr2/auto-orient/quality/95/thumbnail/!528x288r/gravity/Center/crop/528x288/interlace/1" alt="Avatar">
+                   <img src="../images/book.jpg">
                </a>
             </li>
             <!--slider card two-->
