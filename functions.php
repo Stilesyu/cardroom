@@ -10,12 +10,12 @@ $header_info = array(
 );
 add_theme_support('custom-header', $header_info);
 //删除header-image边上留边
-//function remove_admin_login_header()
-//{
-//    remove_action('wp_head', '_admin_bar_bump_cb');
-//}
-//
-//add_action('get_header', 'remove_admin_login_header');
+function remove_admin_login_header()
+{
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
+add_action('get_header', 'remove_admin_login_header');
 
 //import style.css
 function enqueue_styles()
@@ -73,7 +73,9 @@ function article_index($content)
             }
         }
         // 将目录拼接到文章
-        return "<ul class=\"single-area-post-catalogue-ul\">\n" . $ul_li . "</ul>\n";
+        if (!empty($ul_li)) {
+            return "<ul class=\"single-area-post-catalogue-ul\">\n" . $ul_li . "</ul>\n";
+        }
     }
 }
 

@@ -9,7 +9,7 @@
 <?php get_header();
 
 ?>
-
+<?php  get_template_part('/header/header', 'category');?>
 <section class="single-area">
     <section class="single-area-contain">
         <?php

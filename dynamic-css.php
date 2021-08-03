@@ -1,9 +1,9 @@
 <?php
 
-function ashe_dynamic_css()
+function cardroom_dynamic_css()
 {
 
-    $css = '<style id="ashe_dynamic_css">';
+    $css = '<style id="cardroom_dynamic_css">';
 
     $css .= '
 		.featured-header-area-card {
@@ -25,4 +25,4 @@ function ashe_dynamic_css()
 
 
 }
-add_action('wp_head', 'ashe_dynamic_css');
+add_action('wp_head', 'cardroom_dynamic_css');

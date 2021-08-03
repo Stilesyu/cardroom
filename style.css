@@ -5,7 +5,7 @@ html {
     margin-top: 0;
 }
 
-body{
+body {
     margin: 0;
 }
 
@@ -26,7 +26,7 @@ Page Header
 /*--------------------------------------------------------------
 slider area
 --------------------------------------------------------------*/
-.featured-slider-area-card {
+.slider-area-card {
     width: 100%;
     max-width: 1120px;
     position: relative;
@@ -35,7 +35,7 @@ slider area
 }
 
 
-.featured-slider-area-card-swiper-wrapper {
+.slider-area-card-swiper-wrapper {
     display: flex;
     list-style: none;
     left: 0;
@@ -43,40 +43,65 @@ slider area
     margin: 0 auto;
 }
 
-.featured-slider-area-card-swiper-wrapper-item {
+.slider-area-card-swiper-wrapper-item {
     width: 264px;
     height: 144px;
     margin-right: 20px;
 }
 
-.featured-slider-area-card-swiper-wrapper-item img {
+.slider-area-card-swiper-wrapper-item img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
+
+/*--------------------------------------------------------------
+header area category
+--------------------------------------------------------------*/
+.category-area {
+    width: 1120px;
+    height: 50px;
+    background: #3983c2;
+    margin: 30px auto 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.category-area a{
+   margin-left: 10px;
+    color: white;
+}
+
+
+
+
+
 /*--------------------------------------------------------------
 main container area
 --------------------------------------------------------------*/
-.featured-posts-area {
+.posts-area {
     width: 100%;
 }
 
-.featured-posts-area-content {
+.posts-area-content {
     max-width: 1120px;
     position: relative;
     margin: 0 auto;
 }
 
-.featured-posts-area-article {
-    margin-top: 20px;
+.posts-area-article {
+    margin-bottom: 20px;
     display: flex;
     border-radius: 8px;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     background: white;
 }
 
-.featured-posts-area-post-thumbnail {
+.posts-area-post-thumbnail {
     width: 50%;
     margin: 0;
     height: auto;
@@ -84,13 +109,13 @@ main container area
 }
 
 
-.featured-posts-area-post-thumbnail img {
+.posts-area-post-thumbnail img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.featured-posts-area-post-content {
+.posts-area-post-content {
     width: 50%;
     padding: 30px;
     display: flex;
@@ -98,11 +123,11 @@ main container area
     justify-content: space-between;
 }
 
-.featured-posts-area-post-content-title {
+.posts-area-post-content-title {
     text-align: center;
 }
 
-.featured-posts-area-post-footer {
+.posts-area-post-footer {
     display: flex;
     justify-content: space-between;
 }
@@ -137,10 +162,11 @@ content single area
     display: flex;
     max-width: 1120px;
     position: relative;
-    margin: 30px auto;
+    margin: 0px auto;
 }
 
 .single-area-post-content {
+    width: 1120px;
     background: white;
     height: auto;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
@@ -211,7 +237,17 @@ ol {
     margin: 0 auto;
 }
 
-
 .footer-area-copyright p {
     color: white;
+}
+
+/*--------------------------------------------------------------
+category
+--------------------------------------------------------------*/
+.category-list-area{
+    width: 1124px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
