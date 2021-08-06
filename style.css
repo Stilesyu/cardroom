@@ -47,6 +47,7 @@ slider area
     width: 264px;
     height: 144px;
     margin-right: 20px;
+    background-size:contain ;
 }
 
 .slider-area-card-swiper-wrapper-item img {
@@ -71,13 +72,10 @@ header area category
     align-items: center;
 }
 
-.category-area a{
-   margin-left: 10px;
+.category-area a {
+    margin-left: 10px;
     color: white;
 }
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -244,7 +242,7 @@ ol {
 /*--------------------------------------------------------------
 category
 --------------------------------------------------------------*/
-.category-list-area{
+.category-list-area {
     width: 1124px;
     height: auto;
     display: flex;

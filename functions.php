@@ -17,20 +17,23 @@ function remove_admin_login_header()
 
 add_action('get_header', 'remove_admin_login_header');
 
-//import style.css
+//import css file (front page)
 function enqueue_styles()
 {
     wp_enqueue_style('stylesheet', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('cardroom_style', get_stylesheet_uri(), array(), '1.9.7');
+//load responsive css
+    wp_enqueue_style('cardroom-responsive', get_theme_file_uri('/assets/css/responsive.css'), array(), '1.9.7');
 }
+
+add_action('wp_enqueue_scripts', 'enqueue_styles');
+
 
 //import dynamic-css
 require get_parent_theme_file_path('/dynamic-css.php');
 require get_parent_theme_file_path("/customizer.php");
 require get_parent_theme_file_path("/customizer-default.php");
 require get_parent_theme_file_path("/functions-default.php");
-wp_enqueue_style('cardroom_style', get_stylesheet_uri(), array(), '1.9.7');
-//load responsive css
-wp_enqueue_style('cardroom-responsive', get_theme_file_uri('/assets/css/responsive.css'), array(), '1.9.7');
 
 
 /**
@@ -79,9 +82,5 @@ function article_index($content)
     }
 }
 
-function hidden_if_catalogue_not_exist()
-{
-
-}
 
 
