@@ -47,7 +47,7 @@ slider area
     width: 264px;
     height: 144px;
     margin-right: 20px;
-    background-size:contain ;
+    background-size: contain;
 }
 
 .slider-area-card-swiper-wrapper-item img {
@@ -196,10 +196,12 @@ content single area
     border: none;
 }
 
-/*catalogue*/
 
-.single-area-post-catalogue-container {
+/*catalogue*/
+.single-area-post-sidebar-container {
     float: right;
+    display: flex;
+    flex-direction: column;
 }
 
 .single-area-post-catalogue {
@@ -238,6 +240,12 @@ ol {
 .footer-area-copyright p {
     color: white;
 }
+
+.single-area-post-donate img{
+    width: 150px;
+    height: 150px;
+}
+
 
 /*--------------------------------------------------------------
 category

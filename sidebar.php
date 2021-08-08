@@ -1,6 +1,8 @@
 <?php
-
 if (is_single()) {
-    $article = get_the_content();
-    echo article_index($article);
+    get_template_part('templates/sidebars/sidebar-catalogue', 'sidebars');
 }
+if (!empty(cardroom_options('sidebar_show_up_donate_image'))) {
+    get_template_part('templates/sidebars/sidebar-donate', 'sidebars');
+}
+?>

@@ -21,7 +21,8 @@ function cardroom_options($control)
         'general_image_1' => '',
         'general_image_2' => '',
         'general_image_3' => '',
-        'general_image_4' => ''
+        'general_image_4' => '',
+        'sidebar_show_up_donate_image' => ''
     );
 
     // merge defaults and options

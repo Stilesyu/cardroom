@@ -17,7 +17,7 @@
 }
 /*if screen max width greater than 1674,hidden catalogue*/
 @media screen and (max-width: 1674px){
-    .single-area-post-catalogue-container{
+    .single-area-post-sidebar-container{
         visibility: hidden;
     }
 }

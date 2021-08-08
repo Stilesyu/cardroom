@@ -26,10 +26,8 @@ $classes = array(
                 ?>
             </div>
         </div>
-        <div class="single-area-post-catalogue-container">
-            <div class="single-area-post-catalogue">
+        <div class="single-area-post-sidebar-container">
                 <?php get_sidebar() ?>
-            </div>
         </div>
     </div>
 </article>
