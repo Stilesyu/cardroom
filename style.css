@@ -198,10 +198,11 @@ content single area
 
 
 /*catalogue*/
-.single-area-post-sidebar-container {
+.single-area-post-sidebar-container-left {
     float: right;
     display: flex;
     flex-direction: column;
+    width: 100px;
 }
 
 .single-area-post-catalogue {
@@ -210,7 +211,6 @@ content single area
     background: white;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    margin-left: 10px;
     position: fixed;
 }
 
@@ -223,6 +223,15 @@ content single area
 ol {
     list-style: decimal;
 }
+/*donate*/
+.single-area-post-donate{
+    background: white;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 10px;;
+}
+
 
 /*footer*/
 .footer-area {
