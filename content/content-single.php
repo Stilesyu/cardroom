@@ -13,10 +13,11 @@ $classes = array(
 ?>
 <!--post content-->
 <article id="post-<?php the_ID(); ?>"<?php post_class($classes) ?>>
+
     <div class="single-area-post">
-<!--        <div class="single-area-post-sidebar-container-left">-->
-<!--            --><?php //get_sidebar('left')?>
-<!--        </div>-->
+        <div class="single-area-post-sidebar-container-left">
+            <?php get_sidebar('left') ?>
+        </div>
         <div class="single-area-post-content">
             <header class="single-area-post-content-header">
                 <?php if (get_the_title()): ?>
@@ -30,7 +31,7 @@ $classes = array(
             </div>
         </div>
         <div class="single-area-post-sidebar-container-right">
-                <?php get_sidebar('right') ?>
+            <?php get_sidebar('right') ?>
         </div>
     </div>
 </article>
