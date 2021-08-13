@@ -82,5 +82,11 @@ function article_index($content)
     }
 }
 
-
+/************************************/
+// theme feature
+/************************************/
+//Edit Post->add featured image function
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+}
 

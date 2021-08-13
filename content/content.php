@@ -31,7 +31,7 @@ $classes = join(' ', $classes);
         <?php the_title('<h2 class="posts-area-post-content-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
         <?php
         $excerpt = get_the_excerpt();
-        echo wp_trim_words($excerpt, 5, "...")
+        echo wp_trim_words($excerpt, 1, "...")
         ?>
         <footer class="posts-area-post-footer">
             <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('M d, Y'); ?></time>
