@@ -19,7 +19,7 @@ get_template_part('/header/header', 'category');?>
         <?php
         while (have_posts()):
             the_post();
-            get_template_part('content/content', 'single');
+            get_template_part('templates/content/content', 'single');
         endwhile;
         ?>
     </section>

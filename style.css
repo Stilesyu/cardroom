@@ -31,7 +31,7 @@ index.php
     display: flex;
 }
 .index-container-center{
-    width: 70%;
+    width: 80%;
 }
 
 .index-container-center-container{
@@ -39,7 +39,7 @@ index.php
 }
 
 .index-container-right{
-    width: 30%;
+    width: 20%;
 }
 
 .index-container-center-container-post {
@@ -108,8 +108,6 @@ header area category
 /*--------------------------------------------------------------
 content.php
 --------------------------------------------------------------*/
-
-
 .content-container-article {
     margin-bottom: 20px;
     display: flex;
@@ -211,8 +209,6 @@ content single area
     width: 100px;
 }
 
-
-
 .single-area-post-catalogue {
     width: fit-content;
     height: fit-content;
@@ -220,7 +216,6 @@ content single area
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
-
 
 .single-area-post-catalogue li {
     white-space: nowrap;
@@ -230,15 +225,6 @@ content single area
 ol {
     list-style: decimal;
 }
-/*donate*/
-.single-area-post-donate{
-    background: white;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    text-align: center;
-    margin-left: 10px;;
-}
-
 
 /*footer*/
 .footer-area {
@@ -257,10 +243,6 @@ ol {
     color: white;
 }
 
-.single-area-post-donate img{
-    width: 150px;
-    height: 150px;
-}
 
 
 /*--------------------------------------------------------------
@@ -272,4 +254,22 @@ category
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+}
+/*--------------------------------------------------------------
+sidebar-donate.php
+--------------------------------------------------------------*/
+.sidebar-donate-container{
+    background: white;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+.sidebar-donate-container img{
+    width: 150px;
+    height: 150px;
 }
