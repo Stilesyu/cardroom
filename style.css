@@ -23,6 +23,33 @@ Page Header
     margin: 0;
 }
 
+
+/*--------------------------------------------------------------
+index.php
+--------------------------------------------------------------*/
+.index-container{
+    display: flex;
+}
+.index-container-center{
+    width: 70%;
+}
+
+.index-container-center-container{
+    float: right;
+}
+
+.index-container-right{
+    width: 30%;
+}
+
+.index-container-center-container-post {
+    max-width: 1120px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
 /*--------------------------------------------------------------
 slider area
 --------------------------------------------------------------*/
@@ -79,19 +106,11 @@ header area category
 
 
 /*--------------------------------------------------------------
-main container area
+content.php
 --------------------------------------------------------------*/
-.posts-area {
-    width: 100%;
-}
 
-.posts-area-content {
-    max-width: 1120px;
-    position: relative;
-    margin: 0 auto;
-}
 
-.posts-area-article {
+.content-container-article {
     margin-bottom: 20px;
     display: flex;
     border-radius: 8px;
@@ -99,7 +118,7 @@ main container area
     background: white;
 }
 
-.posts-area-post-thumbnail {
+.content-container-article-thumbnail {
     width: 50%;
     margin: 0;
     height: auto;
@@ -107,13 +126,13 @@ main container area
 }
 
 
-.posts-area-post-thumbnail img {
+.content-container-article-thumbnail img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.posts-area-post-content {
+.content-container-article-content {
     width: 50%;
     padding: 30px;
     display: flex;
@@ -121,11 +140,11 @@ main container area
     justify-content: space-between;
 }
 
-.posts-area-post-content-title {
+.content-container-article-content-title {
     text-align: center;
 }
 
-.posts-area-post-footer {
+.content-container-article-footer {
     display: flex;
     justify-content: space-between;
 }
@@ -136,21 +155,6 @@ main container area
     margin: 30px auto;
     display: flex;
     color: #9b9595;
-    /*background: white;*/
-    /*box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);*/
-    /*height: 60px;*/
-    /*align-items: center;*/
-    /*border-radius: 8px;*/
-
-}
-
-.featured-navigation-area-item {
-    margin-left: 10px;
-    width: auto;
-}
-
-.featured-navigation-area-item a {
-    color: black;
 }
 
 /*--------------------------------------------------------------

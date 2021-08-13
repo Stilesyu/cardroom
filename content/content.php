@@ -5,17 +5,17 @@
 
 // Custom Post Classes
 $classes = array(
-    'posts-area-article'
+    'content-container-article'
 );
 
 $classes = join(' ', $classes);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($classes); ?>>
     <!--show post thumbnail-->
-    <figure class="posts-area-post-thumbnail<?php if (!has_post_thumbnail()) echo ' no-thumbnail'; ?>">
+    <figure class="content-container-article-thumbnail<?php if (!has_post_thumbnail()) echo ' no-thumbnail'; ?>">
         <?php
         if (is_sticky()) :
-            echo '<span class="sticky-badge">' . __('Sticky Post', 'justwrite') . '</span>';
+            echo '<span' . __('Sticky Post', 'card_room') . '</span>';
         endif;
         if (has_post_thumbnail()) :
             echo '<a href="' . get_permalink() . '">';
@@ -27,8 +27,8 @@ $classes = join(' ', $classes);
         do_action('ac_action_content_thumbnail_after'); // After thumbnail action
         ?>
     </figure>
-    <div class="posts-area-post-content">
-        <?php the_title('<h2 class="posts-area-post-content-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
+    <div class="content-container-article-content">
+        <?php the_title('<h2 class="content-container-article-content-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
         <?php
         //Extract the first paragraph of the article.If the number of words in the content is greater than 50, then 50 characters will be intercepted
         $excerpt = get_the_excerpt();
@@ -38,14 +38,14 @@ $classes = join(' ', $classes);
         }
         echo $excerpt;
         ?>
-        <footer class="posts-area-post-footer">
+        <footer class="content-container-article-footer">
             <div>
                 <!--author-->
                 <a><?php echo get_the_author() ?></a>
                 <!--date-->
                 <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('M d, Y'); ?></time>
             </div>
-            <?php if (!is_category()) { ?><span class="posts-area-post-content-category"><em
+            <?php if (!is_category()) { ?><span><em
                     style="font-style: normal"><?php _e('Category:', 'cardroom'); ?></em> <?php output_first_category(); ?>
                 </span><?php } ?>
         </footer>
