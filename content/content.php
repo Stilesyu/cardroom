@@ -30,11 +30,21 @@ $classes = join(' ', $classes);
     <div class="posts-area-post-content">
         <?php the_title('<h2 class="posts-area-post-content-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>'); ?>
         <?php
+        //Extract the first paragraph of the article.If the number of words in the content is greater than 50, then 50 characters will be intercepted
         $excerpt = get_the_excerpt();
-        echo wp_trim_words($excerpt, 1, "...")
+        $excerpt = wp_trim_words($excerpt, 1, "...");
+        if (isset($excerpt[50])) {
+            $excerpt = mb_substr($excerpt, 0, 50, "utf-8") . '...';
+        }
+        echo $excerpt;
         ?>
         <footer class="posts-area-post-footer">
-            <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('M d, Y'); ?></time>
+            <div>
+                <!--author-->
+                <a><?php echo get_the_author() ?></a>
+                <!--date-->
+                <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('M d, Y'); ?></time>
+            </div>
             <?php if (!is_category()) { ?><span class="posts-area-post-content-category"><em
                     style="font-style: normal"><?php _e('Category:', 'cardroom'); ?></em> <?php output_first_category(); ?>
                 </span><?php } ?>
