@@ -29,13 +29,11 @@ index.php
 --------------------------------------------------------------*/
 .index-container{
     display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 .index-container-center{
     width: 80%;
-}
-
-.index-container-center-container{
-    float: right;
 }
 
 .index-container-right{
@@ -119,7 +117,7 @@ content.php
 .content-container-article-thumbnail {
     width: 50%;
     margin: 0;
-    height: auto;
+    max-height: 200px;
     overflow: hidden;
 }
 
@@ -258,18 +256,16 @@ category
 /*--------------------------------------------------------------
 sidebar-donate.php
 --------------------------------------------------------------*/
-.sidebar-donate-container{
+.sidebar-official-accounts-container{
     background: white;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
-    width: 50%;
+    width: 100%;
     margin-top: 20px;
     margin-left: 50px;
 }
 
-
-.sidebar-donate-container img{
-    width: 150px;
-    height: 150px;
+.sidebar-official-accounts-container img{
+    width: 100%;
 }
