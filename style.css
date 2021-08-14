@@ -9,6 +9,9 @@ body {
     margin: 0;
 }
 
+.blog {
+    margin: 0;
+}
 /*--------------------------------------------------------------
 Page Header
 --------------------------------------------------------------*/
@@ -16,11 +19,6 @@ Page Header
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-}
-
-
-.blog {
-    margin: 0;
 }
 
 
@@ -213,12 +211,6 @@ content-single.php
 
 
 /*catalogue*/
-.content-single-container{
-    display: flex;
-}
-
-
-
 .single-area-post-catalogue {
     width: fit-content;
     height: fit-content;
