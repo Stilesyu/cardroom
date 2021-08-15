@@ -210,23 +210,6 @@ content-single.php
 }
 
 
-/*catalogue*/
-.single-area-post-catalogue {
-    width: fit-content;
-    height: fit-content;
-    background: white;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-.single-area-post-catalogue li {
-    white-space: nowrap;
-    list-style: decimal;
-}
-
-ol {
-    list-style: decimal;
-}
 
 /*footer*/
 .footer-area {
@@ -273,3 +256,34 @@ sidebar-donate.php
 .sidebar-official-accounts-container img{
     width: 100%;
 }
+/*--------------------------------------------------------------
+sidebar-catalogue.php
+--------------------------------------------------------------*/
+/*catalogue*/
+.sidebar-catalogue {
+    width: fit-content;
+    height: fit-content;
+    background: white;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.sidebar-catalogue h3{
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+/*.single-area-post-catalogue-h2{*/
+/*    list-style: none;*/
+/*}*/
+
+
+.sidebar-catalogue-content{
+    padding: 0 10px 10px;
+}
+
+
+

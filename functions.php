@@ -36,51 +36,7 @@ require get_parent_theme_file_path("/customizer-default.php");
 require get_parent_theme_file_path("/functions-default.php");
 
 
-/**
- * extract heading content(h1,h2 etc) from an HTML string using regex
- *
- * @param $content string posts content
- * @author stilesyu
- * @since cardroom 1.0.0
- * @date  2021/7/20
- */
-function article_index($content)
-{
-    $matches = array();
-    $ul_li = '';
-    //regex:extract heading content
-    $rh = "|<h[^>]+>(.*)</h[^>]+>|iU";
-    $h2_num = 0;
-    $h3_num = 0;
-    if (is_single()) {
-        if (preg_match_all($rh, $content, $matches)) {
-            foreach ($matches[1] as $num => $title) {
-                //matches[0] <h2 id=xx>yyy</h2>
-                //matches[1] yyy
-                //extract header type
-                $hx = substr($matches[0][$num], 0, 3);
-                $start = stripos($content, $matches[0][$num]);
-                $end = strlen($matches[0][$num]);
-                if ($hx == "<h2") {
-                    $h2_num += 1;
-                    $h3_num = 0;
-                    $content = substr_replace($content, '<h2 id="h2-' . $num . '">' . $title . '</h2>', $start, $end);
-                    $title = preg_replace('/<.+?>/', "", $title); //将h2里面的a链接或者其他标签去除，留下文字
-                    $ul_li .= '<li class="single-area-post-catalogue-h2"><a href="#h2-' . $num . '" class="tooltip" title="' . $title . '">' . $title . "</a><i class=\"post_nav_dot\"></i></li>\n";
-                } else if ($hx == "<h3") {
-                    $h3_num += 1; //记录h3的序列，此熬过请查看百度百科中的序号，如1.1、1.2中的第二位数
-                    $content = substr_replace($content, '<h3 id="h3-' . $num . '">' . $title . '</h3>', $start, $end);
-                    $title = preg_replace('/<.+?>/', "", $title); //将h3里面的a链接或者其他标签去除，留下文字
-                    $ul_li .= '<ol class="single-area-post-catalogue-h3"><a href="#h3-' . $num . '" class="tooltip" title="' . $title . '">' . $title . "</a><i class=\"post_nav_dot\"></i></ol>\n";
-                }
-            }
-        }
-        // 将目录拼接到文章
-        if (!empty($ul_li)) {
-            return "<ul class=\"single-area-post-catalogue-ul\">\n" . $ul_li . "</ul>\n";
-        }
-    }
-}
+
 
 /************************************/
 // theme feature
