@@ -12,6 +12,7 @@ body {
 .blog {
     margin: 0;
 }
+
 /*--------------------------------------------------------------
 Page Header
 --------------------------------------------------------------*/
@@ -25,16 +26,17 @@ Page Header
 /*--------------------------------------------------------------
 index.php
 --------------------------------------------------------------*/
-.index-container{
+.index-container {
     display: flex;
     max-width: 1600px;
     margin: 0 auto;
 }
-.index-container-center{
+
+.index-container-center {
     width: 80%;
 }
 
-.index-container-right{
+.index-container-right {
     width: 20%;
 }
 
@@ -47,18 +49,18 @@ index.php
 /*--------------------------------------------------------------
 single.php
 --------------------------------------------------------------*/
-.single-container{
+.single-container {
     max-width: 1600px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
 }
 
-.single-container-section{
+.single-container-section {
     width: 80%;
 }
 
-.single-container-sidebar{
+.single-container-sidebar {
     width: 20%;
 }
 
@@ -210,7 +212,6 @@ content-single.php
 }
 
 
-
 /*footer*/
 .footer-area {
     background: #33363b;
@@ -229,7 +230,6 @@ content-single.php
 }
 
 
-
 /*--------------------------------------------------------------
 category
 --------------------------------------------------------------*/
@@ -240,26 +240,24 @@ category
     flex-direction: column;
     margin: 0 auto;
 }
+
 /*--------------------------------------------------------------
 sidebar-donate.php
 --------------------------------------------------------------*/
-.sidebar-official-accounts-container{
-    background: white;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+.sidebar-official-accounts-container {
     text-align: center;
-    width: 100%;
     margin-top: 20px;
-    margin-left: 50px;
 }
 
-.sidebar-official-accounts-container img{
+.sidebar-official-accounts-container img {
     width: 100%;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
+
 /*--------------------------------------------------------------
 sidebar-catalogue.php
 --------------------------------------------------------------*/
-/*catalogue*/
 .sidebar-catalogue {
     width: fit-content;
     height: fit-content;
@@ -269,19 +267,26 @@ sidebar-catalogue.php
     margin-top: 20px;
 }
 
-.sidebar-catalogue h3{
+.sidebar-catalogue h3 {
     margin: 0;
     padding-top: 10px;
     text-align: center;
 }
 
+.single-area-post-catalogue-h2 {
+    list-style: none;
+    margin-top: .5em;
+}
 
-/*.single-area-post-catalogue-h2{*/
-/*    list-style: none;*/
-/*}*/
+.single-area-post-catalogue-ul {
+    padding: 0;
+}
 
+.single-area-post-catalogue-ul li{
+    color: #808080;
+}
 
-.sidebar-catalogue-content{
+.sidebar-catalogue-content {
     padding: 0 10px 10px;
 }
 

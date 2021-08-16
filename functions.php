@@ -36,13 +36,27 @@ require get_parent_theme_file_path("/customizer-default.php");
 require get_parent_theme_file_path("/functions-default.php");
 
 
-
-
 /************************************/
 // theme feature
 /************************************/
 //Edit Post->add featured image function
-if ( function_exists( 'add_theme_support' ) ) {
-    add_theme_support( 'post-thumbnails' );
+if (function_exists('add_theme_support')) {
+    add_theme_support('post-thumbnails');
 }
 
+function anchor_content_h2($content) {
+
+    // Pattern that we want to match
+    $pattern = '/<h2>(.*?)</h2>/';
+
+    // now run the pattern and callback function on content
+    // and process it through a function that replaces the title with an id
+    $content = preg_replace_callback($pattern, function ($matches) {
+        $title = $matches[1];
+        $slug = sanitize_title_with_dashes($title);
+        return '<h3 id="' . $slug . '">' . $title . '</h3>';
+    }, $content);
+    return $content;
+}
+
+add_filter('the_content', 'anchor_content_h2');

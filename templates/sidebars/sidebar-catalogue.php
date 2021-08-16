@@ -3,22 +3,7 @@
         <h3>文章目录</h3>
     </div>
     <div class="sidebar-catalogue-content">
-        <!--        <ol>-->
-        <!--            <li>A-->
-        <!--                <ol>-->
-        <!--                    -->
-        <!--                </ol>-->
-        <!--            </li>-->
-        <!--            <li>B</li>-->
-        <!--            <li>-->
-        <!--                CC-->
-        <!--                <ol style="padding-left: 10px">-->
-        <!--                    <li>AA</li>-->
-        <!--                    <li>BB</li>-->
-        <!--                </ol>-->
-        <!--            </li>-->
-        <!--        </ol>-->
-        <!--        --><?php
+        <?php
         $article = get_the_content();
         echo article_index($article);
         ?>
@@ -27,7 +12,6 @@
 
 
 <?php
-
 /**
  * extract heading content(h1,h2 etc) from an HTML string using regex
  *
@@ -49,35 +33,28 @@ function article_index($content)
                 //matches[1] yyy
                 //extract header type
                 $hx = substr($matches[0][$num], 0, 3);
-                $nextHx = substr($matches[0][$num + 1], 0, 3);
-                $start = stripos($content, $matches[0][$num]);
-                $end = strlen($matches[0][$num]);
+                $nextHx = $num == sizeof($matches[0]) - 1 ? '' : substr($matches[0][$num + 1], 0, 3);
                 if ($hx == "<h2") {
-                    $content = substr_replace($content, '<h2 id="h2-' . $num . '">' . $title . '</h2>', $start, $end);
-                    $title = preg_replace('/<.+?>/', "", $title); //将h2里面的a链接或者其他标签去除，留下文字
+                    $title = preg_replace("/<.+?>/", "", $title); //将h2里面的a链接或者其他标签去除，留下文字
                     if ($nextHx == "<h3") {
-                        $ul_li .= '<li class="single-area-post-catalogue-h2">\n';
-                    }else{
-                        $ul_li .= '<li class="single-area-post-catalogue-h2"></li>\n';
+                        $ul_li .= "<li class=\"single-area-post-catalogue-h2\">\n" . $title . "<ol>";
+                    } else {
+                        $ul_li .= "<li class=\"single-area-post-catalogue-h2\"><a>" . $title . "</a></li>\n";
                     }
                 } else if ($hx == "<h3") {
-                    $content = substr_replace($content, '<h3 id="h3-' . $num . '">' . $title . '</h3>', $start, $end);
-                    $title = preg_replace('/<.+?>/', "", $title); //将h3里面的a链接或者其他标签去除，留下文字
-                    if ($nextHx == "<h2") {
-                        $ul_li .= '<li><a href="#h3-' . $num . '" class="tooltip" title="' . $title . '">' . $title . "</a><i class=\"post_nav_dot\"></i></li>\n";
+                    $title = preg_replace("/<.+?>/", "", $title); //将h3里面的a链接或者其他标签去除，留下文字
+                    if ($nextHx == "<h2" || $nextHx == '') {
+                        $ul_li .= "<li class=\"single-area-post-catalogue-h3\">" . $title . "</li> \n</ol> \n</li>";
                     } else {
-                        $ul_li .= '<ol class="single-area-post-catalogue-h3"><a href="#h3-' . $num . '" class="tooltip" title="' . $title . '">' . $title . "</a><i class=\"post_nav_dot\"></i></ol>\n";
-                        $flag = true;
+                        $ul_li .= "<li class=\"single-area-post-catalogue-h3\">" . $title . "</li>";
                     }
                 }
             }
         }
         // 将目录拼接到文章
         if (!empty($ul_li)) {
-            return "<ol class=\"single-area-post-catalogue-ul\">\n" . $ul_li . "</ol>\n";
+            return "<ul class=\"single-area-post-catalogue-ul\">\n" . $ul_li . "</ul>\n";
         }
     }
 }
-
-
 ?>
