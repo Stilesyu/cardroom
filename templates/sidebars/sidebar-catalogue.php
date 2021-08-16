@@ -37,24 +37,25 @@ function article_index($content)
                 if ($hx == "<h2") {
                     $title = preg_replace("/<.+?>/", "", $title); //将h2里面的a链接或者其他标签去除，留下文字
                     if ($nextHx == "<h3") {
-                        $ul_li .= "<li class=\"single-area-post-catalogue-h2\">\n" . $title . "<ol>";
+                        $ul_li .= "<li class='single-area-post-catalogue-h2'><a href='#" . $title . "'>" . $title . "</a><ol>";
                     } else {
-                        $ul_li .= "<li class=\"single-area-post-catalogue-h2\"><a>" . $title . "</a></li>\n";
+                        $ul_li .= "<li class='single-area-post-catalogue-h2'><a href='#" . $title . "'>" . $title . "</a></li>";
                     }
                 } else if ($hx == "<h3") {
                     $title = preg_replace("/<.+?>/", "", $title); //将h3里面的a链接或者其他标签去除，留下文字
                     if ($nextHx == "<h2" || $nextHx == '') {
-                        $ul_li .= "<li class=\"single-area-post-catalogue-h3\">" . $title . "</li> \n</ol> \n</li>";
+                        $ul_li .= "<li class='single-area-post-catalogue-h3'><a href='#" . $title . "'>" . $title . "</a></li></ol></li>";
                     } else {
-                        $ul_li .= "<li class=\"single-area-post-catalogue-h3\">" . $title . "</li>";
+                        $ul_li .= "<li class='single-area-post-catalogue-h3'><a href='#" . $title . "'>" . $title . "</a></li>";
                     }
                 }
             }
         }
         // 将目录拼接到文章
         if (!empty($ul_li)) {
-            return "<ul class=\"single-area-post-catalogue-ul\">\n" . $ul_li . "</ul>\n";
+            return "<ul class='single-area-post-catalogue-ul'>" . $ul_li . "</ul>";
         }
     }
 }
+
 ?>

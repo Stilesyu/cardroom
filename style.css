@@ -259,6 +259,8 @@ sidebar-donate.php
 sidebar-catalogue.php
 --------------------------------------------------------------*/
 .sidebar-catalogue {
+    float: right;
+    position: fixed;
     width: fit-content;
     height: fit-content;
     background: white;
@@ -278,17 +280,27 @@ sidebar-catalogue.php
     margin-top: .5em;
 }
 
-.single-area-post-catalogue-ul {
-    padding: 0;
+.single-area-post-catalogue-h3{
+    list-style: none;
 }
 
-.single-area-post-catalogue-ul li{
-    color: #808080;
+
+.single-area-post-catalogue-ul {
+    padding: 0;
 }
 
 .sidebar-catalogue-content {
     padding: 0 10px 10px;
 }
 
+.sidebar-catalogue-content a {
+    text-decoration: none;
+    font-size: .95rem;
+    line-height: 0;
+    color: #808080;
+}
 
-
+.sidebar-catalogue-content a:focus{
+    color: #3b8dbd;
+    font-size: 1.05rem;
+}
