@@ -50,17 +50,21 @@ add_action('get_header', 'remove_admin_login_header');
 /**
  * Automatically add id to use the title
  * This function is only using for h1-h3
- *
+ * //TODO 虽然H1-H2会自动生成ID=Heading 内容，但是经过测试，发现如果你改了标题，这个ID不会变，导致目录无法定位
+ * //TODO 为了解决这个问题，将结果分成两种情况
  * @author stilesyu
  * @since cardroom 1.0.0
  * @date  2021/8/16
  */
 function auto_id_headings($content)
 {
-    $content = preg_replace_callback('/(\<h[1-3](.*?))\>(.*)(<\/h[1-3]>)/i', function ($matches) {
-        if (!stripos($matches[0], 'id=')) :
+    $content = preg_replace_callback('/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', function ($matches) {
+        if (!stripos($matches[0], 'id=')) {
             $matches[0] = $matches[1] . $matches[2] . ' id="' . $matches[3] . '">' . $matches[3] . $matches[4];
-        endif;
+        } else {
+            $h = substr($matches[0], 0, 3);
+            $matches[0] = $h . ' id="' . $matches[3] . '">' . $matches[3] . $matches[4];
+        };
         return $matches[0];
     }, $content);
     return $content;
