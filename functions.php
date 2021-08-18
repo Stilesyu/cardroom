@@ -25,7 +25,7 @@ function enqueue_styles()
     wp_enqueue_style('cardroom_style', get_stylesheet_uri(), array(), '1.9.7');
 //load responsive css
     wp_enqueue_style('cardroom-responsive', get_theme_file_uri('/assets/css/responsive.css'), array(), '1.9.7');
-    wp_enqueue_style('stylesheet', get_template_directory_uri() . '/animate.css');
+    wp_enqueue_style('animate', get_template_directory_uri() . '/animate.min.css');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_styles');
