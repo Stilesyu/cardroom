@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 HTML
 --------------------------------------------------------------*/
+
 html {
     margin-top: 0;
     scroll-behavior: smooth;
@@ -261,8 +262,7 @@ sidebar-donate.php
 sidebar-catalogue.php
 --------------------------------------------------------------*/
 .sidebar-catalogue {
-    float: right;
-    position: fixed;
+    /*position: fixed;*/
     width: fit-content;
     height: fit-content;
     background: white;
