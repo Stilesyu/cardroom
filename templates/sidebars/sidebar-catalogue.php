@@ -1,17 +1,13 @@
-<div class="sidebar-catalogue">
-    <div>
-        <h3>文章目录</h3>
-    </div>
-    <div class="sidebar-catalogue-content">
-        <?php
-        $article = get_the_content();
-        echo article_index($article);
-        ?>
-    </div>
-</div>
-
-
 <?php
+//output classification style
+$article = get_the_content();
+if (article_catalogue_exist($article)) {
+    echo '<div class="sidebar-catalogue"><div><h3>文章目录</h3></div>
+            <div class="sidebar-catalogue-content">' . article_index($article) . '</div></div>';
+}
+
+
+
 /**
  * extract heading content(h1,h2 etc) from an HTML string using regex
  *
@@ -57,5 +53,12 @@ function article_index($content)
         }
     }
 }
+
+function article_catalogue_exist($content)
+{
+    $rh = "|<h[^>]+>(.*)</h[^>]+>|iU";
+    return preg_match($rh, $content);
+}
+
 
 ?>
