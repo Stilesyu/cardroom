@@ -269,6 +269,9 @@ sidebar-catalogue.php
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     margin-top: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%;
 }
 
 .sidebar-catalogue h3 {

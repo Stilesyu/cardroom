@@ -8,6 +8,7 @@ if (article_catalogue_exist($article)) {
 
 
 
+
 /**
  * extract heading content(h1,h2 etc) from an HTML string using regex
  *
@@ -62,3 +63,30 @@ function article_catalogue_exist($content)
 
 
 ?>
+
+
+<script>
+    // 获取元素的绝对位置坐标（像对于页面左上角）
+    function getElementPagePosition(element){
+        //计算x坐标
+        var actualLeft = element.offsetLeft;
+        var current = element.offsetParent;
+        while (current !== null){
+            actualLeft += current.offsetLeft;
+            current = current.offsetParent;
+        }
+        //计算y坐标
+        var actualTop = element.offsetTop;
+        var current = element.offsetParent;
+        while (current !== null){
+            actualTop += (current.offsetTop+current.clientTop);
+            current = current.offsetParent;
+        }
+        //返回结果
+        return {x: actualLeft, y: actualTop}
+    }
+</script>
+
+
+
+
