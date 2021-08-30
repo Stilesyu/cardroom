@@ -304,3 +304,12 @@ sidebar-catalogue.php
     line-height: 0;
     color: #808080;
 }
+/*--------------------------------------------------------------
+sidebar-ad.php
+--------------------------------------------------------------*/
+.sidebar-ad-container{
+    padding-top: 50px;
+}
+.sidebar-ad-container div{
+    padding-top: 20px;
+}
