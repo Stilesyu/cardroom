@@ -2,13 +2,13 @@
 //output classification style
 $article = get_the_content();
 if (article_catalogue_exist($article)) {
-    echo '<div class="sidebar-catalogue"><div><h3>文章目录</h3></div>
+    echo '<div class="sidebar-catalogue" id="catalogue"><div><h3>文章目录</h3></div>
             <div class="sidebar-catalogue-content">' . article_index($article) . '</div></div>';
 }
 
 
 /**
- * extract heading content(h1,h2 etc) from an HTML string using regex
+ * extract heading content(h1,h2 etc.) from an HTML string using regex
  *
  * @param $content string posts content
  * @author stilesyu

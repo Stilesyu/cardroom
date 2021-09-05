@@ -1,3 +1,23 @@
+/*
+======================================================================================================
+
+Theme Name: cardroom
+Author: Stiles Yu
+
+======================================================================================================
+------------------------------------------------------------------------------------------------------
+
+	Table of Contents:
+	    - html
+	    - body
+	    - blog
+
+
+
+------------------------------------------------------------------------------------------------------
+*/
+
+
 /*--------------------------------------------------------------
 HTML
 --------------------------------------------------------------*/
@@ -14,6 +34,48 @@ body {
 
 .blog {
     margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+table
+--------------------------------------------------------------*/
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+th {
+    border-width: 0 1px 1px 0;
+    font-weight: bold;
+    background-color: #00a0d2;
+
+}
+
+td {
+    border-width: 0 1px 1px 0;
+}
+
+table, th, td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e1e1e1;
+}
+
+/*--------------------------------------------------------------
+pre
+--------------------------------------------------------------*/
+pre{
+    max-width: 100%;
+    overflow: auto;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #e1e1e1;
 }
 
 /*--------------------------------------------------------------
@@ -285,7 +347,7 @@ sidebar-catalogue.php
     margin-top: .5em;
 }
 
-.single-area-post-catalogue-h3{
+.single-area-post-catalogue-h3 {
     list-style: none;
 }
 
@@ -304,12 +366,14 @@ sidebar-catalogue.php
     line-height: 0;
     color: #808080;
 }
+
 /*--------------------------------------------------------------
 sidebar-ad.php
 --------------------------------------------------------------*/
-.sidebar-ad-container{
+.sidebar-ad-container {
     padding-top: 50px;
 }
-.sidebar-ad-container div{
+
+.sidebar-ad-container div {
     padding-top: 20px;
 }

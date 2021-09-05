@@ -11,25 +11,34 @@ if (is_single()) {
 
 <script>
     window.addEventListener("scroll", function () {
-        const catalogue = document.getElementsByClassName('sidebar-catalogue');
-        const adOne = document.getElementById('ad-1');
-        const adTwo = document.getElementById('ad-2');
-        const distance = adOne.getBoundingClientRect().top - catalogue.item(0).getBoundingClientRect().bottom;
-        const adTwoDistance = adTwo.getBoundingClientRect().top - catalogue.item(0).getBoundingClientRect().bottom;
-        console.log(distance);
-        if (distance < 10) {
-            adOne.classList.remove('animate__zoomOutRight');
-            adOne.classList.add('animate__zoomOutRight')
-        }
-        if (distance > 10) {
-            adOne.classList.replace('animate__zoomOutRight', 'animate__zoomInRight');
-        }
-        if (adTwoDistance < 10) {
-            adTwo.classList.remove('animate__zoomOutRight');
-            adTwo.classList.add('animate__zoomOutRight')
-        }
-        if (adTwoDistance > 10) {
-            adTwo.classList.replace('animate__zoomOutRight', 'animate__zoomInRight');
+        const catalogue = document.getElementById('catalogue');
+        for (let i = 0; i < 2; i++) {
+            const ad = document.getElementById("ad-" + (i + 1));
+            const distance = ad.getBoundingClientRect().top - catalogue.getBoundingClientRect().bottom;
+            if (i === 0) {
+                console.log("------------------------------------------")
+                console.log('距离：' + distance);
+                console.log('AD高度：' + ad.getBoundingClientRect().top);
+                // console.log("目录高度" + catalogue.getBoundingClientRect().bottom)
+            }
+            if (distance <= 30) {
+                if (ad.classList.contains('animate__fadeOutRightBig')) {
+                    continue;
+                }
+                ad.classList.remove('animate__fadeInRightBig');
+                ad.classList.add('animate__fadeOutRightBig');
+            }
+            if (distance > 30) {
+                if (ad.classList.contains('animate__fadeInRightBig')) {
+                    continue;
+                }
+                ad.classList.replace('animate__fadeOutRightBig', 'animate__fadeInRightBig');
+            }
+            // if (distance < 29) {
+            //     ad.style.visibility = 'hidden';
+            // } else {
+            //     ad.style.visibility = 'visible';
+            // }
         }
     })
 </script>
