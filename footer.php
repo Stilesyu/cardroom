@@ -1,3 +1,5 @@
+<?php wp_footer(); ?>
+
 <div class="footer-area">
     <div class="footer-area-copyright">
         <p>

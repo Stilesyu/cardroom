@@ -34,11 +34,7 @@ if (is_single()) {
                 }
                 ad.classList.replace('animate__fadeOutRightBig', 'animate__fadeInRightBig');
             }
-            // if (distance < 29) {
-            //     ad.style.visibility = 'hidden';
-            // } else {
-            //     ad.style.visibility = 'visible';
-            // }
+
         }
     })
 </script>

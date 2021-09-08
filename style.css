@@ -37,46 +37,6 @@ body {
 }
 
 
-/*--------------------------------------------------------------
-table
---------------------------------------------------------------*/
-
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border-width: 1px 0 0 1px;
-    margin-bottom: 24px;
-    width: 100%;
-}
-
-th {
-    border-width: 0 1px 1px 0;
-    font-weight: bold;
-    background-color: #00a0d2;
-
-}
-
-td {
-    border-width: 0 1px 1px 0;
-}
-
-table, th, td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #e1e1e1;
-}
-
-/*--------------------------------------------------------------
-pre
---------------------------------------------------------------*/
-pre{
-    max-width: 100%;
-    overflow: auto;
-    padding: 20px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    background-color: #e1e1e1;
-}
 
 /*--------------------------------------------------------------
 Page Header
@@ -275,6 +235,49 @@ content-single.php
     height: auto;
     border: none;
 }
+
+/*pre*/
+/*pre {*/
+/*    max-width: 100%;*/
+/*    overflow: auto;*/
+/*    padding: 20px;*/
+/*    white-space: pre-wrap;*/
+/*    word-wrap: break-word;*/
+/*    background-color: #e1e1e1;*/
+/*}*/
+
+
+/*table {*/
+/*    border-collapse: separate;*/
+/*    border-spacing: 0;*/
+/*    border-width: 1px 0 0 1px;*/
+/*    margin-bottom: 24px;*/
+/*    width: 100%;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*table, th, td {*/
+/*    border-width: 1px;*/
+/*    border-style: solid;*/
+/*    border-color: #e1e1e1;*/
+/*}*/
+
+/*th, td {*/
+/*    text-align: left;*/
+/*    padding: 8px;*/
+
+/*}*/
+
+/*th {*/
+/*    border-width: 0 1px 1px 0;*/
+/*    font-weight: bold;*/
+/*    background-color: #00a0d2;*/
+
+/*}*/
+
+/*td {*/
+/*    border-width: 0 1px 1px 0;*/
+/*}*/
 
 
 /*footer*/
