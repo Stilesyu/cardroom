@@ -18,8 +18,8 @@ get_header();
 <div class="index-container">
     <div class="index-container-center">
             <?php
-            get_template_part('/header/header', 'slider');
-            get_template_part('/header/header', 'category');
+            get_template_part('/templates/header/header', 'ad');
+            get_template_part('/templates/header/header', 'navigation');
             ?>
             <div class="index-container-center-container-post">
                 <?php

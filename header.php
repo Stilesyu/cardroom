@@ -12,7 +12,7 @@
 <!--加载page-header模板-->
 <body  <?php body_class(); ?>>
 <?php
-get_template_part('/header/page', 'header');
+get_template_part('/templates/header/page', 'header');
 ?>
 </body>
 

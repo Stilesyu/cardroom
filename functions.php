@@ -72,3 +72,7 @@ function auto_id_headings($content)
 }
 
 add_filter('the_content', 'auto_id_headings');
+
+register_nav_menus( array(
+    'main_menu' => '主菜单',
+) );
