@@ -12,10 +12,10 @@
             <?php
             //advertise bar
             if (cardroom_options("general_show_up_in_the_post")) {
-                get_template_part('/header/header', 'slider');
+                get_template_part('/templates/header/header', 'ad');
             }
             //navigation bar
-            get_template_part('/header/header', 'category');
+            get_template_part('/templates/header/header', 'navigation');
             while (have_posts()):
                 the_post();
                 get_template_part('templates/content/content', 'single');

@@ -37,7 +37,6 @@ body {
 }
 
 
-
 /*--------------------------------------------------------------
 Page Header
 --------------------------------------------------------------*/
@@ -127,7 +126,7 @@ slider area
 /*--------------------------------------------------------------
 header area category
 --------------------------------------------------------------*/
-.header-navigation-container{
+.header-navigation-container {
     width: 1120px;
     height: 50px;
     background: #3983c2;
@@ -139,7 +138,7 @@ header area category
     align-items: center;
 }
 
-.header-navigation-container-ul{
+.header-navigation-container-ul {
     display: flex;
     justify-content: flex-start;
     list-style: none;
@@ -387,3 +386,30 @@ sidebar-ad.php
 .sidebar-ad-container div {
     padding-top: 20px;
 }
+
+/*--------------------------------------------------------------
+404.php
+--------------------------------------------------------------*/
+.not-find-container {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.not-find-container-center{
+    width: 80%;
+}
+
+.not-find-container-right {
+    width: 20%;
+}
+
+.not-find-container-center-svg{
+    max-width: 1120px;
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
