@@ -90,9 +90,9 @@ single.php
 
 
 /*--------------------------------------------------------------
-slider area
+header-ad.php
 --------------------------------------------------------------*/
-.slider-area-card {
+.header-ad-container {
     width: 100%;
     max-width: 1120px;
     position: relative;
@@ -101,7 +101,7 @@ slider area
 }
 
 
-.slider-area-card-swiper-wrapper {
+.header-ad-container-card-swiper {
     display: flex;
     list-style: none;
     left: 0;
@@ -109,14 +109,14 @@ slider area
     margin: 0 auto;
 }
 
-.slider-area-card-swiper-wrapper-item {
+.header-ad-container-card-swiper-item {
     width: 264px;
     height: 144px;
     margin-right: 20px;
     background-size: contain;
 }
 
-.slider-area-card-swiper-wrapper-item img {
+.header-ad-container-card-swiper-item img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
@@ -165,8 +165,11 @@ content.php
 .content-container-article-thumbnail {
     width: 50%;
     margin: 0;
-    max-height: 200px;
+    max-height: 250px;
     overflow: hidden;
+    background-size: contain;
+    height: auto;
+
 }
 
 
