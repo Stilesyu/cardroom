@@ -32,7 +32,7 @@ $classes = join(' ', $classes);
         <?php
         //Extract the first paragraph of the article.If the number of words in the content is greater than 50, then 50 characters will be intercepted
         $excerpt = get_the_excerpt();
-        $excerpt = wp_trim_words($excerpt, 1, "...");
+        $excerpt = wp_trim_words($excerpt, 100, "...");
         if (isset($excerpt[50])) {
             $excerpt = mb_substr($excerpt, 0, 50, "utf-8") . '...';
         }

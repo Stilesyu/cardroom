@@ -238,11 +238,13 @@ content-single.php
 
 }
 
-.content-single-container-article-content figure img {
+
+.content-single-container-article-content  img {
     box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
-    background-size: cover;
-    height: auto;
     border: none;
+    max-width: 100%;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 /*pre*/
@@ -288,6 +290,16 @@ td {
     border-width: 0 1px 1px 0;
 }
 
+code{
+    background-color: #ededeb;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    border-radius: 3px;
+}
+
+pre code{
+    background: unset;
+}
 
 /*footer*/
 .footer-area {
