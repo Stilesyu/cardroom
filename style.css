@@ -88,6 +88,12 @@ single.php
     width: 20%;
 }
 
+.single-comment-container{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
 
 /*--------------------------------------------------------------
 header-ad.php
@@ -142,6 +148,7 @@ header area category
     display: flex;
     justify-content: flex-start;
     list-style: none;
+    padding-left: 10px;
 }
 
 
@@ -301,6 +308,15 @@ pre code{
     background: unset;
 }
 
+blockquote {
+    color: #333;
+    border-left: 4px solid #ddd;
+    padding: 0 1em 0 20px;
+    margin-left: 0;
+    font-size: 14px;
+    font-style:italic ;
+}
+
 /*footer*/
 .footer-area {
     background: #33363b;
@@ -428,3 +444,9 @@ sidebar-ad.php
     border-radius: 8px;
 }
 
+/*--------------------------------------------------------------
+comments.php
+--------------------------------------------------------------*/
+.comments-container{
+
+}

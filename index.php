@@ -8,7 +8,6 @@
 <?php
 get_header();
 ?>
-
 <!--main content-->
 <div class="index-container">
     <div class="index-container-center">

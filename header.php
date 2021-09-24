@@ -7,7 +7,8 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php
     wp_enqueue_script("jquery");
-    wp_head(); ?>
+    wp_head();
+    ?>
 </head>
 <!--加载page-header模板-->
 <body  <?php body_class(); ?>>

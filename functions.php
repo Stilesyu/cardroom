@@ -72,6 +72,19 @@ function auto_id_headings($content)
 
 add_filter('the_content', 'auto_id_headings');
 
-register_nav_menus( array(
+register_nav_menus(array(
     'main_menu' => '主菜单',
-) );
+));
+
+/**
+ *  Automatically generate title
+ * @author stilesyu
+ * @since cardroom 1.0.0
+ * @date  2021/9/25
+ */
+function Bing_add_theme_support_title()
+{
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'Bing_add_theme_support_title');
