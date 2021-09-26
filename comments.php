@@ -8,7 +8,7 @@
                 get_comments_number());
             ?>
         </h3>
-        <ul class="comment-list">
+        <ul class="comment-container-list">
             <?php
             // part 4
             wp_list_comments( array(

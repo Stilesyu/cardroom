@@ -30,6 +30,7 @@ html {
 body {
     margin: 0;
     scroll-behavior: smooth;
+    background: #f4f4f4;
 }
 
 .blog {
@@ -90,7 +91,7 @@ single.php
 
 .single-comment-container{
     max-width: 1600px;
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: row;
 }
@@ -448,5 +449,25 @@ sidebar-ad.php
 comments.php
 --------------------------------------------------------------*/
 .comments-container{
-
+    max-width: 1120px;
+    width: 80% ;
 }
+
+.comments-container-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comment-container-list ul{
+    list-style: none;
+}
+
+.comment-container-list>li{
+    list-style: none;
+    position: relative;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
