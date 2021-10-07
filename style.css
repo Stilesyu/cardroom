@@ -449,8 +449,9 @@ sidebar-ad.php
 comments.php
 --------------------------------------------------------------*/
 .comments-container{
-    max-width: 1120px;
-    width: 80% ;
+    width: 80%;
+    display: block;
+
 }
 
 .comments-container-title{
@@ -471,3 +472,12 @@ comments.php
     border-radius: 8px;
 }
 
+.comment-body{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.comment-respond{
+    padding-left: 40px;
+}
