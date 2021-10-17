@@ -28,9 +28,9 @@
 </div>
 <div class="single-comment-container">
 <?php
-//    if (comments_open() || get_comments_number()) :
-//        comments_template();
-//    endif; ?>
+    if (comments_open() || get_comments_number()) :
+        comments_template();
+    endif; ?>
 </div>
 <?php
 get_footer()

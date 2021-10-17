@@ -450,9 +450,15 @@ comments.php
 --------------------------------------------------------------*/
 .comments-container{
     width: 80%;
-    display: block;
-
 }
+
+.comment-container-list{
+    max-width: 1120px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
 
 .comments-container-title{
     margin: 0 auto;
