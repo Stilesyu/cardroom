@@ -25,6 +25,13 @@
                <?php _e( '评论已关闭.' ); ?>
            </p>
        <?php endif; ?>
-       <?php comment_form(); ?>
+       <?php
+       $args = array(
+           'title_reply' => esc_html__( '按钮', 'ashe' ),
+           'comment_field' => '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Comment', 'ashe' ) . '</label><textarea name="comment" id="comment" cols="45" rows="8"  maxlength="65525" required="required" spellcheck="false"></textarea></p>',
+           'label_submit' => esc_html__( 'Post Comment', 'ashe' )
+       );
+       comment_form();
+       ?>
    </div>
 </div>

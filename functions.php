@@ -88,3 +88,5 @@ function Bing_add_theme_support_title()
 }
 
 add_action('after_setup_theme', 'Bing_add_theme_support_title');
+
+
