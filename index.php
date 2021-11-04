@@ -10,24 +10,30 @@ get_header();
 ?>
 <!--main content-->
 <div class="index-container">
-    <div class="index-container-center">
-            <?php
-            get_template_part('/templates/header/header', 'ad');
-            get_template_part('/templates/header/header', 'navigation');
-            ?>
-            <div class="index-container-center-container-post">
-                <?php
-                if (have_posts()) :
-                    while (have_posts()) :
-                        the_post();
-                        get_template_part('templates/content/content');
-                    endwhile;
-                endif;
-                ?>
-            </div>
+    <div class="index-container-header">
+        <?php
+        get_template_part('/templates/header/header', 'ad');
+        ?>
     </div>
-    <div class="index-container-right">
-        <?php get_sidebar() ?>
+    <div class="index-container-center">
+         <div>
+             <?php
+             get_template_part('/templates/header/header', 'navigation');
+             ?>
+             <div class="index-container-center-container-post">
+                 <?php
+                 if (have_posts()) :
+                     while (have_posts()) :
+                         the_post();
+                         get_template_part('templates/content/content');
+                     endwhile;
+                 endif;
+                 ?>
+             </div>
+         </div>
+        <div class="index-container-right">
+            <?php get_sidebar() ?>
+        </div>
     </div>
 </div>
 <?php
