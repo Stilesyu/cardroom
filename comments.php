@@ -62,25 +62,23 @@ function bootstrap_comment_callback( $comment, $args, $depth ){
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="media-body">
+            <div class="comment-body">
                 <?php if ( '0' == $comment->comment_approved ) : ?>
                     <p class="comment-awaiting-moderation label label-info"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
                 <?php endif; ?>
                 <div class="comment-content">
                     <?php comment_text(); ?>
                 </div>
-                <ul class="list-inline">
-                    <?php edit_comment_link( __( 'Edit' ), '<li class="edit-link">', '</li>' ); ?>
+                <div class="list-inline">
+                    <?php edit_comment_link( __( 'Edit' ), '<div class="edit-link">', '</div>' ); ?>
                     <?php
                     comment_reply_link( array_merge( $args, array(
                         'add_below' => 'div-comment',
                         'depth'     => $depth,
-                        'max_depth' => $args['max_depth'],
-                        'before'    => '<li class="reply-link">',
-                        'after'     => '</li>'
+                        'max_depth' => $args['max_depth']
                     ) ) );
                     ?>
-                </ul>
+                </div>
             </div>
         </div>
     <?php
