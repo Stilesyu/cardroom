@@ -4,7 +4,7 @@ require get_parent_theme_file_path('/dynamic-css.php');
 require get_parent_theme_file_path("/customizer.php");
 require get_parent_theme_file_path("/customizer-default.php");
 require get_parent_theme_file_path("/functions-default.php");
-require get_template_directory() . '/classes/walker-comment.php';
+require get_template_directory() . '/classes/class-twentytwenty-walker-comment.php';
 
 
 /************************************/
@@ -89,5 +89,58 @@ function Bing_add_theme_support_title()
 }
 
 add_action('after_setup_theme', 'Bing_add_theme_support_title');
+
+/**
+ *  替换Gravatar头像为Cravatar
+ * @author stilesyu
+ * @since cardroom 1.0.0
+ * @date  2021/9/25
+ */
+if (!function_exists('get_cravatar_url')) {
+    function get_cravatar_url($url)
+    {
+        $sources = array(
+            'www.gravatar.com',
+            '0.gravatar.com',
+            '1.gravatar.com',
+            '2.gravatar.com',
+            'secure.gravatar.com',
+            'cn.gravatar.com'
+        );
+        return str_replace($sources, 'cravatar.cn', $url);
+    }
+
+    add_filter('um_user_avatar_url_filter', 'get_cravatar_url', 1);
+    add_filter('bp_gravatar_url', 'get_cravatar_url', 1);
+    add_filter('get_avatar_url', 'get_cravatar_url', 1);
+}
+
+if (!function_exists('set_defaults_for_cravatar')) {
+    /**
+     * 替换WordPress讨论设置中的默认头像
+     */
+    function set_defaults_for_cravatar($avatar_defaults)
+    {
+        $avatar_defaults['gravatar_default'] = 'Cravatar 标志';
+
+        return $avatar_defaults;
+    }
+
+    add_filter('avatar_defaults', 'set_defaults_for_cravatar', 1);
+}
+
+
+/************************************/
+// comment respond
+/************************************/
+function comment_respond()
+{
+    if ((!is_admin()) && is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
+}
+
+add_action('wp_enqueue_scripts', 'comment_respond');
+
 
 
