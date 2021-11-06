@@ -4,6 +4,7 @@ require get_parent_theme_file_path('/dynamic-css.php');
 require get_parent_theme_file_path("/customizer.php");
 require get_parent_theme_file_path("/customizer-default.php");
 require get_parent_theme_file_path("/functions-default.php");
+require get_template_directory() . '/classes/walker-comment.php';
 
 
 /************************************/

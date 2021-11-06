@@ -92,8 +92,6 @@ single.php
 .single-comment-container {
     max-width: 1200px;
     margin: 50px auto;
-    display: flex;
-    flex-direction: row;
 }
 
 .single-container-center-sidebar {
