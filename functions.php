@@ -4,7 +4,7 @@ require get_parent_theme_file_path('/dynamic-css.php');
 require get_parent_theme_file_path("/customizer.php");
 require get_parent_theme_file_path("/customizer-default.php");
 require get_parent_theme_file_path("/functions-default.php");
-require get_template_directory() . '/classes/class-twentytwenty-walker-comment.php';
+require get_template_directory() . '/classes/class-cardroom-walker-comment.php';
 
 
 /************************************/
@@ -14,7 +14,13 @@ require get_template_directory() . '/classes/class-twentytwenty-walker-comment.p
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
 }
-
+add_theme_support(
+    'html5',
+    array(
+        'comment-form',
+        'comment-list'
+    )
+);
 
 /************************************/
 // global setting
