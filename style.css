@@ -44,7 +44,6 @@ Page Header
 .featured-header-area-card {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -132,7 +131,6 @@ header-ad.php
 .header-ad-container-card-swiper-item img {
     width: 266px;
     height: 144px;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -146,7 +144,6 @@ header area category
     margin: 30px auto 0;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
 }
@@ -171,7 +168,6 @@ content.php
 .content-container-article {
     margin-bottom: 20px;
     display: flex;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     background: white;
     max-height: 193px;
 }
@@ -229,7 +225,6 @@ content-single.php
     margin: 0 auto;
     flex-direction: column;
     background: white;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -252,7 +247,6 @@ content-single.php
 
 
 .content-single-container-article-content img {
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     border: none;
     max-width: 100%;
     margin-top: 13px;
@@ -361,7 +355,6 @@ sidebar-donate.php
 
 .sidebar-official-accounts-container img {
     max-width: 280px;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 /*--------------------------------------------------------------
@@ -372,7 +365,6 @@ sidebar-catalogue.php
     width: fit-content;
     height: fit-content;
     background: white;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
     position: -webkit-sticky;
     position: sticky;
@@ -444,23 +436,38 @@ sidebar-ad.php
     position: relative;
     margin: 0 auto;
     background: white;
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 /*--------------------------------------------------------------
 comments.php
 --------------------------------------------------------------*/
 .comment-body {
-    padding: 10px;
+    padding: 15px 30px;
 }
 
-.comment-author-info{
+.comment .comment-respond{
+    background: #F3F4F7;
+    padding: 10px;
+    margin: 20px;
+}
+
+.comment .section-inner.thin.max-percentage{
+    background: #F3F4F7;
+}
+
+.comment-author-info {
     display: flex;
     flex-direction: column;
     padding-left: 5px;
 }
 
-.comment-date{
+.comment-reply-title {
+    text-align: center;
+    color: #655e5e;
+    margin: 0 0 10px 0;
+}
+
+.comment-date {
     color: #8e8787;
 }
 
@@ -480,8 +487,114 @@ comments.php
 }
 
 .depth-1 {
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
     background: white;
     margin: 20px 0;
+}
+
+.comment-footer-meta a, #submit {
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    background: linear-gradient(135deg, #3983c2, #a777e3);
+    border-radius: 4px;
+    will-change: transform;
+    font-size: 15px;
+}
+
+.comment-line {
+    max-width: 880px;
+    margin: 0;
+}
+
+.comment-respond {
+    max-width: 880px;
+}
+
+#submit {
+    border: 0;
+}
+
+.comment-notes {
+    color: #6d6d6d;
+    line-height: 1.4;
+    text-align: center;
+    background: #f4f4f4;
+    padding-bottom: 20px;
+    margin: 0 0 16px 0;
+}
+/* reply respond*/
+.section-inner.thin.max-percentage{
+    background: white;
+}
+
+
+.comment-form-comment,.comment-form-author,.comment-form-email,.comment-form-url,.comment-form-cookies-consent{
+    padding: 5px 20px;
+    margin: 5px 0;
+}
+
+.comment-respond .comment-form-author, .comment-respond .comment-form-email{
+    float: left;
+    width: calc(50% - 1rem);
+}
+
+.form-submit{
+    padding: 0 0 5px 20px;
+}
+
+
+.section-inner.thin{
+    max-width: 58rem;
+}
+
+.comment-form-comment{
+    margin: 0;
+}
+.comment-form-comment textarea{
+    -webkit-box-sizing: border-box;
+    padding: 8px 12px 8px 5px;
+    margin: 0;
+    line-height: 28px;
+    border: 1px solid #e3e3e3;
+    -webkit-transition: all ease-in 200ms;
+    width: 100%;
+    height: 100%;
+}
+
+.comment-form-author,.comment-form-email,.comment-form-url{
+    display: inline-block;
+    width: 33%;
+    max-width: 250px;
+    position: relative;
+}
+
+.comment-form-author label, .comment-form-email label, .comment-form-url label{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 400;
+    width: auto;
+    min-width: 100px;
+    text-align: center;
+    background-color: #eee;
+    padding: 11px 0 12px;
+}
+
+.comment-form-author input, .comment-form-email input, .comment-form-url input{
+    padding: 5px 5px 5px 105px;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    line-height: 28px;
+    border: 1px solid #e3e3e3;
+    -webkit-transition: all ease-in 200ms;
+    width: 100%;
+}
+
+.comment-form-author input, .comment-form-email input, .comment-form-url input:focus{
+    outline: none;
 }
 

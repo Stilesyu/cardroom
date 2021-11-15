@@ -64,9 +64,7 @@ if (!class_exists('cardroom_Walker_Comment')) {
                         array(
                             'add_below' => 'div-comment',
                             'depth' => $depth,
-                            'max_depth' => $args['max_depth'],
-                            'before' => '<span class="comment-reply">',
-                            'after' => '</span>',
+                            'max_depth' => $args['max_depth']
                         )
                     )
                 );
