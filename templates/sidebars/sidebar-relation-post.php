@@ -40,12 +40,12 @@
                     }
                 }
                 else {
-                    echo '<li>* 暂无相关文章</li>';
+                    echo '<li>暂无相关文章</li>';
                 }
                 wp_reset_query();
             }
             else {
-                echo '<li>* 暂无相关文章</li>';
+                echo '<li>暂无相关文章</li>';
             }
             ?>
         </ul>
