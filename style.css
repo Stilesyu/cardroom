@@ -20,6 +20,7 @@ Author: Stiles Yu
 
 /*--------------------------------------------------------------
 HTML
+Global
 --------------------------------------------------------------*/
 
 html {
@@ -33,7 +34,7 @@ body {
     background: #f4f4f4;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -45,6 +46,69 @@ ul, li {
 
 .blog {
     margin: 0;
+}
+
+
+/*pre*/
+pre {
+    max-width: 100%;
+    overflow: auto;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #e1e1e1;
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin-bottom: 24px;
+    width: 100%;
+    font-size: 14px;
+}
+
+table, th, td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e1e1e1;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+
+}
+
+th {
+    border-width: 0 1px 1px 0;
+    font-weight: bold;
+    background-color: #00a0d2;
+
+}
+
+td {
+    border-width: 0 1px 1px 0;
+}
+
+code {
+    background-color: #ededeb;
+    font-size: 85%;
+    border-radius: 3px;
+}
+
+pre code {
+    background: unset;
+}
+
+blockquote {
+    color: #333;
+    border-left: 4px solid #ddd;
+    padding: 0 1em 0 20px;
+    margin-left: 0;
+    font-size: 14px;
+    font-style: italic;
 }
 
 
@@ -147,7 +211,7 @@ header-ad.php
 header area category
 --------------------------------------------------------------*/
 .header-navigation-container {
-    width: 880px;
+    max-width: 880px;
     height: 50px;
     background: #3983c2;
     margin: 30px auto 0;
@@ -261,68 +325,6 @@ content-single.php
     margin-bottom: 13px;
 }
 
-/*pre*/
-pre {
-    max-width: 100%;
-    overflow: auto;
-    padding: 20px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    background-color: #e1e1e1;
-}
-
-
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border-width: 1px 0 0 1px;
-    margin-bottom: 24px;
-    width: 100%;
-    font-size: 14px;
-}
-
-table, th, td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #e1e1e1;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-
-}
-
-th {
-    border-width: 0 1px 1px 0;
-    font-weight: bold;
-    background-color: #00a0d2;
-
-}
-
-td {
-    border-width: 0 1px 1px 0;
-}
-
-code {
-    background-color: #ededeb;
-    padding: 0.2em 0.4em;
-    font-size: 85%;
-    border-radius: 3px;
-}
-
-pre code {
-    background: unset;
-}
-
-blockquote {
-    color: #333;
-    border-left: 4px solid #ddd;
-    padding: 0 1em 0 20px;
-    margin-left: 0;
-    font-size: 14px;
-    font-style: italic;
-}
 
 /*footer*/
 .footer-area {
@@ -353,67 +355,6 @@ category
     margin: 0 auto;
 }
 
-/*--------------------------------------------------------------
-sidebar-donate.php
---------------------------------------------------------------*/
-.sidebar-official-accounts-container {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.sidebar-official-accounts-container img {
-    max-width: 280px;
-}
-
-/*--------------------------------------------------------------
-sidebar-catalogue.php
---------------------------------------------------------------*/
-.sidebar-catalogue {
-    /*position: fixed;*/
-    width: fit-content;
-    height: fit-content;
-    background: white;
-    margin-top: 20px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 10%;
-}
-
-.sidebar-catalogue h3 {
-    margin: 0;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.single-area-post-catalogue-h2 {
-    margin-top: .5em;
-}
-
-
-.single-area-post-catalogue-ul {
-    padding: 0;
-}
-
-.sidebar-catalogue-content {
-    padding: 0 10px 10px;
-}
-
-.sidebar-catalogue-content a {
-    font-size: .95rem;
-    line-height: 0;
-    color: #808080;
-}
-
-/*--------------------------------------------------------------
-sidebar-ad.php
---------------------------------------------------------------*/
-.sidebar-ad-container {
-    padding-top: 50px;
-}
-
-.sidebar-ad-container div {
-    padding-top: 20px;
-}
 
 /*--------------------------------------------------------------
 404.php
@@ -603,27 +544,100 @@ comments.php
     outline: none;
 }
 
+
+/*--------------------------------------------------------------
+----------------------sidebar area------------------------------
+--------------------------------------------------------------*/
+
+/*sidebar common style*/
+.sidebar-official-accounts-container, .sidebar-relation-post-container, .sidebar-catalogue {
+    margin-bottom: 20px;
+}
+
+.sidebar-relation-post-container-header, .sidebar-catalogue-header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+
+.sidebar-relation-post-container-header-left, .sidebar-catalogue-header-left {
+    height: 40px;
+    width: 40px;
+    padding: 0 10px;
+}
+
+.sidebar-relation-post-container-center,.sidebar-catalogue-center {
+    padding: 10px;
+}
+
+
+/*--------------------------------------------------------------
+sidebar-donate.php
+--------------------------------------------------------------*/
+.sidebar-official-accounts-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sidebar-official-accounts-container img {
+    max-width: 280px;
+}
+
+/*--------------------------------------------------------------
+sidebar-catalogue.php
+--------------------------------------------------------------*/
+.sidebar-catalogue {
+    width: 100%;
+    height: fit-content;
+    background: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%;
+}
+
+
+.single-area-post-catalogue-h2 {
+    margin-top: .5em;
+}
+
+
+.single-area-post-catalogue-ul {
+    padding: 0;
+}
+
+.sidebar-catalogue-content {
+    padding-left: 10px;
+}
+
+.sidebar-catalogue-content a {
+    font-size: .95rem;
+    line-height: 0;
+    color: #808080;
+}
+
+/*--------------------------------------------------------------
+sidebar-ad.php
+--------------------------------------------------------------*/
+.sidebar-ad-container {
+    padding-top: 50px;
+}
+
+.sidebar-ad-container div {
+    padding-top: 20px;
+}
+
+
 /*--------------------------------------------------------------
 sidebar-relation-post.php
 --------------------------------------------------------------*/
-.sidebar-relation-post-container-header {
-    margin: 0 0 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: relative;
-}
-
 .sidebar-relation-post-container ul {
     padding: 0;
 }
 
 .sidebar-relation-post-container {
     background: white;
-}
-
-.sidebar-relation-post-container-center {
-    padding: 10px;
 }
 
 .sidebar-relation-container-post {

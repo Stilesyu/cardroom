@@ -149,4 +149,19 @@ function comment_respond()
 add_action('wp_enqueue_scripts', 'comment_respond');
 
 
+/**
+ * 开启https访问资源
+ * @author stilesyu
+ * @since cardroom 1.0.0
+ * @date  2021/11/19
+ */
+add_filter('script_loader_src', 'agnostic_script_loader_src', 20,2);
+
+function agnostic_script_loader_src($src, $handle) {
+    return preg_replace('/^(http|https):/', '', $src);
+}
+add_filter('style_loader_src', 'agnostic_style_loader_src', 20,2);
+function agnostic_style_loader_src($src, $handle) {
+    return preg_replace('/^(http|https):/', '', $src);
+}
 

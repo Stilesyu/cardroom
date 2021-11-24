@@ -2,8 +2,13 @@
 //output classification style
 $article = get_the_content();
 if (article_catalogue_exist($article)) {
-    echo '<div class="sidebar-catalogue" id="catalogue"><div><h3>文章目录</h3></div>
-            <div class="sidebar-catalogue-content">' . article_index($article) . '</div></div>';
+    echo '<div class="sidebar-catalogue" id="catalogue">
+              <div class="sidebar-catalogue-center">
+                <div class="sidebar-catalogue-header">
+                    <img class="sidebar-catalogue-header-left" src=" ' . get_template_directory_uri() . '/images/catalog.png"/>
+                     <h3 class="sidebar-catalogue-header-right">文章目录</h3>
+                </div>
+            <div class="sidebar-catalogue-content">' . article_index($article) . '</div></div></div>';
 }
 
 

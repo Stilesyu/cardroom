@@ -12,7 +12,7 @@ get_header();
 <div class="index-container">
     <div class="index-container-header">
         <?php
-        get_template_part('/templates/header/header', 'ad');
+        //get_template_part('/templates/header/header', 'ad');
         ?>
     </div>
     <div class="index-container-center">

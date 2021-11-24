@@ -1,25 +1,43 @@
 /*--------------------------------------------------------------
                         responsive layout
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+max width：1250
+--------------------------------------------------------------*/
+@media screen and (max-width: 1250px) {
+    .featured-header-area-card {
+        height: 350px !important;
+    }
+    .single-container-center-sidebar {
+        display: none;
+    }
 
-/*page-header*/
+    .index-container-right {
+        display: none;
+    }
+
+    .index-container-center {
+        display: block;
+    }
+    .footer-area-copyright{
+        width: auto;
+    }
+    .content-container-article-content-excerpt{
+        display: none;
+    }
+    .content-container-article-footer{
+        display: none;
+    }
+    .single-container-center{
+        display: block;
+    }
+
+}
+
+
 #page-header .featured-header-area-card {
     height: auto;
     padding: 70px 0;
-}
-
-@media screen and (max-width: 1280px) {
-    .featured-header-area-card {
-        height: 430px !important;
-    }
-
-
-}
-/*if screen max width greater than 1674,hidden catalogue*/
-@media screen and (max-width: 1674px){
-    .single-area-post-sidebar-container{
-        visibility: hidden;
-    }
 }
 
 
@@ -27,37 +45,48 @@
     .featured-header-area-card {
         height: 350px !important;
     }
+
     .logo-img {
         max-width: 400px !important;
     }
 }
+
 @media screen and (max-width: 880px) {
     .featured-header-area-card {
         height: 290px !important;
     }
+
     .logo-img {
         max-width: 300px !important;
     }
 }
+
 @media screen and (max-width: 750px) {
     .featured-header-area-card {
         height: 250px !important;
     }
+
     .logo-img {
         max-width: 250px !important;
     }
 }
+
 @media screen and (max-width: 690px) {
     .featured-header-area-card {
         height: 210px !important;
     }
+
     .logo-img {
         max-width: 200px !important;
     }
 }
+
 @media screen and (max-width: 550px) {
     .featured-header-area-card {
         height: auto !important;
         padding: 50px 0 !important;
+        width: 100%;
     }
 }
+
+

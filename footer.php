@@ -9,7 +9,9 @@
             Theme:CardRoom by StilesYu
         </p>
         <p>
-            浙ICP备19034576号
+            <a href="https://beian.miit.gov.cn/#/Integrated/index" style="color:white">
+                浙ICP备19034576号-1
+            </a>
         </p>
     </div>
 

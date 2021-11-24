@@ -36,7 +36,7 @@ $classes = join(' ', $classes);
         if (isset($excerpt[50])) {
             $excerpt = mb_substr($excerpt, 0, 50, "utf-8") . '...';
         }
-        echo $excerpt;
+        echo '<div class="content-container-article-content-excerpt">'.$excerpt.'</div>';
         ?>
         <footer class="content-container-article-footer">
             <div>

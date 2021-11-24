@@ -9,7 +9,10 @@
 
 <div class="sidebar-relation-post-container">
     <div class="sidebar-relation-post-container-center">
-        <header class="sidebar-relation-post-container-header">相关推荐</header>
+        <div class="sidebar-relation-post-container-header">
+            <img class="sidebar-relation-post-container-header-left" src="<?php echo get_template_directory_uri()."/images/recommend.png"?>"/>
+            <h3 class="sidebar-relation-post-container-header-right">相关推荐</h3>
+        </div>
         <ul>
             <?php
             global $post;
