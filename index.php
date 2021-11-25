@@ -16,7 +16,7 @@ get_header();
         ?>
     </div>
     <div class="index-container-center">
-         <div>
+         <div class="index-container-center-container">
              <?php
              get_template_part('/templates/header/header', 'navigation');
              ?>

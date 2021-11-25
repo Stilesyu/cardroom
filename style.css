@@ -111,6 +111,11 @@ blockquote {
     font-style: italic;
 }
 
+p,.content-container-article-content-excerpt,.content-container-article-footer{
+    font-size: 16px;
+}
+
+
 
 /*--------------------------------------------------------------
 Page Header
