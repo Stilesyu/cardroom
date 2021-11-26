@@ -36,6 +36,8 @@ body {
 
 a {
     text-decoration: none;
+    word-wrap:break-word;
+
 }
 
 
@@ -96,6 +98,7 @@ code {
     background-color: #ededeb;
     font-size: 85%;
     border-radius: 3px;
+    word-wrap:break-word
 }
 
 pre code {
@@ -113,6 +116,7 @@ blockquote {
 
 p,.content-container-article-content-excerpt,.content-container-article-footer{
     font-size: 16px;
+    word-wrap:break-word
 }
 
 

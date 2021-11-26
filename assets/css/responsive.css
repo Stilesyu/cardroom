@@ -8,6 +8,7 @@ max width：1250
     .featured-header-area-card {
         height: 350px !important;
     }
+
     .single-container-center-sidebar {
         display: none;
     }
@@ -19,20 +20,20 @@ max width：1250
     .index-container-center {
         display: block;
     }
-    .footer-area-copyright{
+
+    .footer-area-copyright {
         width: auto;
     }
-    .single-container-center{
+
+    .single-container-center {
         display: block;
     }
 
-    .single-comment-container{
+    .single-comment-container {
         max-width: 880px;
     }
 
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -40,11 +41,11 @@ max width：600
 --------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
 
-    .content-single-container-article-content-header-title{
-        font-size: 28px;
+    .content-single-container-article-content-header-title {
+        font-size: 33px;
     }
 
-    p{
+    p {
         font-size: 15px;
     }
 
@@ -52,105 +53,105 @@ max width：600
         display: none;
     }
 
-    .content-container-article-content-title{
+    .content-container-article-content-title {
         font-size: 16px;
     }
 
-    .header-navigation-container{
+    .header-navigation-container {
         margin: 0;
         border-radius: 0;
     }
 
-    .index-container-center-container-post{
+    .index-container-center-container-post {
         padding: 10px;
     }
 
-    .single-container-center-sidebar {
+
+    .content-container-article-content-excerpt {
         display: none;
     }
-    .index-container-right {
+
+    .content-container-article-footer {
         display: none;
     }
-    .index-container-center {
-        display: block;
+
+
+    #comment {
+        height: 77px;
     }
-    .footer-area-copyright{
+    .comment-form-author input, .comment-form-email input, .comment-form-url input{
         width: auto;
     }
-    .content-container-article-content-excerpt{
-        display: none;
+    .comment-form-author, .comment-form-email, .comment-form-url{
+        width: 100%;
+        float: none;
     }
-    .content-container-article-footer{
-        display: none;
-    }
-    .single-container-center{
-        display: block;
-    }
+
 }
 
 
 /*--------------------------------------------------------------
-max width：400
+max width：411 pixel 2
 --------------------------------------------------------------*/
-@media screen and (max-width: 400px){
-    .content-single-container-article-content-header-title{
+@media screen  and (max-width: 411px){
+    .comment-form-author input, .comment-form-email input, .comment-form-url input{
+        padding: 5px 0;
+    }
+
+    .content-single-container-article-content-header-title {
         font-size: 28px;
     }
 
-    p{
-        font-size: 15px;
-    }
 
-    .featured-header-area-card {
-        display: none;
-    }
+}
 
-    .content-container-article-content-title{
-        font-size: 16px;
-    }
 
-    .header-navigation-container{
-        margin: 0;
-        border-radius: 0;
-    }
-
-    .index-container-center-container-post{
-        padding: 10px;
-    }
-
-    .single-container-center-sidebar {
-        display: none;
-    }
-    .index-container-right {
-        display: none;
-    }
-    .index-container-center {
-        display: block;
-    }
-    .footer-area-copyright{
-        width: auto;
-    }
-    .content-container-article-content-excerpt{
-        display: none;
-    }
-    .content-container-article-footer{
-        display: none;
-    }
-    .single-container-center{
-        display: block;
-    }
-
-    .single-comment-container{
-        max-width: 350px;
-    }
-
-    .comment-respond{
-        max-width: 340px;
-    }
-
-    #comment{
-        height: 77px;
+/*--------------------------------------------------------------
+max width：375  iphone6/7/8
+--------------------------------------------------------------*/
+@media screen  and (max-width: 375px){
+    .content-single-container-article-content-header-title {
+        font-size: 25px;
     }
 
 }
+
+
+
+/*--------------------------------------------------------------
+max width：360 Galaxy S5
+--------------------------------------------------------------*/
+@media screen and (max-width: 360px){
+
+    .footer-area-copyright p {
+        font-size: 13px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+max width：320 iphone 5/SE
+--------------------------------------------------------------*/
+@media screen and (max-width: 320px) {
+    .content-single-container-article-content-header-title {
+        font-size: 20px;
+    }
+
+
+    .single-comment-container {
+        max-width: 350px;
+    }
+
+    .comment-respond {
+        max-width: 340px;
+    }
+
+
+
+
+
+
+}
+
 
