@@ -28,10 +28,17 @@ $classes = array(
         </div>
     </div>
 </article>
-
-<?php
-
-
-?>
+<div class="content-single-container-footer">
+    <div class="content-single-container-footer-left">
+        <?php
+        next_post_link('上一篇：%link', '%title', true);
+        ?>
+    </div>
+    <div class="content-single-container-footer-right">
+        <?php
+        previous_post_link('下一篇：%link', '%title', true);
+        ?>
+    </div>
+</div>
 
 

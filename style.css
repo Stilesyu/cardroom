@@ -353,6 +353,34 @@ content-single.php
 }
 
 
+.content-single-container-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 880px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px 0;
+}
+
+.content-single-container-footer-left,.content-single-container-footer-right{
+    background-color: #ffffff;
+    height:  auto;
+    padding: 0 10px;
+    line-height: 50px;
+    text-align: center;
+    align-content: center;
+    color: black;
+}
+
+.content-single-container-footer-left a,.content-single-container-footer-right a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
 /*--------------------------------------------------------------
 category
 --------------------------------------------------------------*/
