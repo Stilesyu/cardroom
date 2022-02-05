@@ -22,6 +22,10 @@ Author: Stiles Yu
 HTML
 Global
 --------------------------------------------------------------*/
+h1:not(.content-single-container-article-content-header-title){
+    font-size: 2em;
+}
+
 
 html {
     margin-top: 0;
